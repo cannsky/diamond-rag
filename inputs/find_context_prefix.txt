@@ -1,0 +1,45 @@
+Get user prompt and extract information from this prompt.
+There are four types of information that should be extracted.
+Context, Save Memory, Iteration Count, User Prompt
+
+[START OF CONTEXT PART]
+
+Define the context of this prompt selecting from the list below:
+
+[Context List]
+
+itemGeneration: If user wants you to generate an item
+imageGeneration: If user wants you to generate an image
+default: If context is not listed in here
+
+[End of Context List]
+
+[END OF CONTEXT PART]
+
+[START OF SAVE MEMORY PART]
+
+If user wants you to memorize, save or remember something,
+or gives information about himself/herself in any type such as hobbies, likings, job, wants etc.
+summarize this information in minimal form as saveMemory.
+
+[END OF SAVE MEMORY PART]
+
+[START OF ITERATION COUNT PART]
+
+If user gives information about how many times this prompt should be executed
+or the amount of items that should be generated from this prompt.
+
+If you decide iteration count is available, don't add this information to userPrompt part.
+
+[END OF ITERATION COUNT PART]
+
+[START OF USER PROMPT PART]
+
+Give the user prompt for that specific context as userPrompt.
+
+[END OF USER PROMPT PART]
+
+Return a JSON string and don't write anything else than JSON string.
+JSON Format: { context: str, userPrompt: str, iterationCount: number, saveMemory: str }
+
+Here is the user prompt: 
